@@ -1,0 +1,51 @@
+*{ /* Quita los estilos del navegador por defecto */
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+a{ /* Quitar decoracion de enlaces */
+	text-decoration: none;
+}
+i{ /* Estilo del Icono Online */
+	color: darkred;
+
+}
+#contenedor{ /* Identificador del contenedor Externo */
+	height: 200px;
+	overflow: hidden;	/* Oculta los contenedores 1,2 y 3 */ 
+}
+.itemCarrucel{ /* estilo del contenedor interno del carrucel */
+	border: 1px solid black;
+	height: 200px;
+	position: relative;
+}
+
+.tarjetaCarrucel{ /* estilo de la anchura de las tarjetas o IMG´S */
+	height: 100%;
+}
+
+.flechasCarrucel{ /* estilo de las flechas para cambio de img´s */
+	color: black;;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+/* Para cada contenedor o tajeta donde van las Img´s */
+
+#Img1{
+	background-color: rgba(0, 125, 255, 0.6);
+}
+
+#Img2{
+	background-color: rgba(0, 100, 255, 0.7);
+}
+
+#Img3{
+	background-color: rgba(0, 25, 255, 0.8);
+}
