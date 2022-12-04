@@ -16,6 +16,22 @@ img{
 	width: 100%;
 }
 
+#lineasGuia{   /* lineas Enlazadas */
+	width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+#lineasGuia >a{   /* lineas Enlazadas dentro de los enlaces */
+	font-size: 3em;
+}
+#lineasGuia >a:hover{
+	background-color: pink;
+}
+
+#lineasGuia:hover{
+	background-color: purple;
+}
+
 #contenedor{ /* Identificador del Contenedor Externo */
 	height: 260px;
 	width: 100%;
@@ -23,21 +39,8 @@ img{
 	margin-inline: 2%;
 	margin-block: 1%;
 	overflow: hidden;	/* Oculta los contenedores 1,2 y 3 */
-}
-
-/* Propiedad de Animación */
-@keyframes slide{
-	0%{margin-left: 0%}
-	20%{margin-left: 0%}
 	
-	25%{margin-left: 100%}
-	45%{margin-left: 100%}
-
-	50%{margin-left: 200%}
-	70%{margin-left: 200%}
 }
-/* Propiedad de Animación */
-
 .itemCarrucel{ /* estilo del Contenedor Interno del carrucel */
 	border: 1px solid black;
 	height: 260px;
@@ -47,8 +50,6 @@ img{
 
 .tarjetaCarrucel{ /* estilo de la anchura de las tarjetas o IMG´S */
 	height: 100%;
-	animation: slide 15s infinite;	/* crear un Variable con el nombre slide con 15segundos de forma infinita con una entrada suave */
-
 }
 
 .flechasCarrucel{ /* estilo de las flechas para cambio de img´s */
@@ -60,18 +61,4 @@ img{
 	align-items: center;
 	justify-content: space-between;
 	padding: 20px;
-}
-
-/* Para cada contenedor o tajeta donde van las Img´s */
-
-#Img1{
-	background-color: rgba(0, 125, 255, 0.6);
-}
-
-#Img2{
-	background-color: rgba(0, 100, 255, 0.7);
-}
-
-#Img3{
-	background-color: rgba(0, 25, 255, 0.8);
 }
