@@ -1,0 +1,107 @@
+*{ /* Quita los estilos del navegador por defecto */
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+nav{
+	background-color: rgba(150, 150, 200, 1.0);
+	height: 90px;
+	width: 100%;
+}
+.enlace{
+	position: fixed;
+	padding: 10px 60px;
+}
+.logo{
+	height: 70px;
+}
+nav > ul{
+	float: right;
+	margin-right: 15px;
+}
+nav > ul > li{
+	display: inline-block; /* posiciona en linea los li */
+	line-height: 90px;
+	margin: 0 2px;
+}
+ul > li > a{ /* arreglo del texto de los enlaces a */
+	color: white;
+	font-size: 24px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	text-transform: uppercase;
+}
+li > a > .active, li > a:hover{
+	background-color: rgba(255, 55, 25, 0.2);
+	transition: 0.5s;
+}
+.checbnt{
+	font-size: 30px;
+	color: white;
+	float: right;
+	line-height: 90px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+#check{
+	display: none;
+}
+
+section{ /* colocacion de imgen */
+    background: url(../IMG/Viaja_Diviertete.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(90vh - 90px); /* Toma el 100% pero quita los 80px del menu */
+}
+
+@media (max-width: 952px){ /* Responsive con tamaños de tabletas */
+	.enlace{
+		padding-left: 20px;
+	}
+	nav > ul > li > a{
+		font-size: 16px;
+	}
+}
+
+
+@media (max-width: 858px){ /* Responsive con tamaños de celulares */
+	.checbnt{
+		display: block;
+	}
+	ul{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0 , 0, 0.8);
+		text-anchor: 10px;
+		top: 80px;
+		left: 100%;
+		text-align: center;
+		transition: all 0.5s;
+	}
+	nav > ul > li{
+		display: block;
+		margin: 50px 0;
+		line-height: 30px;
+	}
+	nav > ul > li > a{
+		font-size: 20px;
+	}
+	li > a:hover, li > a > .active{
+		background: black;
+		color: white;
+	}
+	/* se crea la logica del menu */
+	#check:checked ~ ul{/*cuando el check este marcado  muestra la lista*/
+		left:0; /* muestra los datos al ser 0% */
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 80px;
+		text-align: center;
+		transition: all 0.5s;
+	}
+}
